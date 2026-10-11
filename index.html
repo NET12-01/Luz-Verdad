@@ -273,43 +273,25 @@ input[type="range"]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;b
 
 <script>
 /* ============================================================
-   BIBLIOTECA — Reina Valera 1909 (dominio público)
+   CONFIGURACIÓN DE LA API
    ============================================================ */
-const LIBRARY = [
-  { id:'genesis1',title:'Génesis 1',author:'La Biblia · Reina Valera 1909',category:'Antiguo Testamento',icon:'🌍',colors:['#1e3c72','#2a5298'],
-    chapters:[{title:'La Creación',text:`En el principio crió Dios los cielos y la tierra.\n\nY la tierra estaba desordenada y vacía, y las tinieblas estaban sobre la haz del abismo, y el Espíritu de Dios se movía sobre la haz de las aguas.\n\nY dijo Dios: Sea la luz: y fué la luz.\n\nY vió Dios que la luz era buena: y apartó Dios la luz de las tinieblas.\n\nY llamó Dios á la luz Día, y á las tinieblas llamó Noche: y fué la tarde y la mañana un día.\n\nY dijo Dios: Haya expansión en medio de las aguas, y separe las aguas de las aguas.\n\nE hizo Dios la expansión, y apartó las aguas que estaban debajo de la expansión, de las aguas que estaban sobre la expansión: y fué así.\n\nY llamó Dios á la expansión Cielos: y fué la tarde y la mañana el día segundo.\n\nY dijo Dios: Júntense las aguas que están debajo de los cielos en un lugar, y descúbrase la seca: y fué así.\n\nY llamó Dios á la seca Tierra, y á la reunión de las aguas llamó Mares: y vió Dios que era bueno.\n\nY dijo Dios: Produzca la tierra hierba verde, hierba que dé simiente; árbol de fruto que dé fruto según su género, que su simiente esté en él, sobre la tierra: y fué así.\n\nY produjo la tierra hierba verde, hierba que da simiente según su naturaleza, y árbol que da fruto, cuya simiente está en él, según su género: y vió Dios que era bueno.\n\nY fué la tarde y la mañana el día tercero.\n\nY dijo Dios: Sean lumbreras en la expansión de los cielos para apartar el día y la noche: y sean por señales, y para las estaciones, y para días y años;\n\nY sean por lumbreras en la expansión de los cielos para alumbrar sobre la tierra: y fué así.\n\nE hizo Dios las dos grandes lumbreras; la lumbrera mayor para que señorease en el día, y la lumbrera menor para que señorease en la noche: hizo también las estrellas.\n\nY púsolas Dios en la expansión de los cielos, para alumbrar sobre la tierra,\n\nY para señorear en el día y en la noche, y para apartar la luz y las tinieblas: y vió Dios que era bueno.\n\nY fué la tarde y la mañana el día cuarto.\n\nY dijo Dios: Produzcan las aguas reptil de ánima viviente, y aves que vuelen sobre la tierra, en la abierta expansión de los cielos.\n\nY crió Dios las grandes ballenas, y toda cosa viva que anda arrastrando, que las aguas produjeron según su género, y toda ave alada según su especie: y vió Dios que era bueno.\n\nY Dios los bendijo diciendo: Fructificad y multiplicad, y henchid las aguas en los mares, y las aves se multipliquen en la tierra.\n\nY fué la tarde y la mañana el día quinto.\n\nY dijo Dios: Produzca la tierra seres vivientes según su género, bestias y serpientes y animales de la tierra según su especie: y fué así.\n\nE hizo Dios animales de la tierra según su género, y ganado según su género, y todo animal que anda arrastrando sobre la tierra según su especie: y vió Dios que era bueno.\n\nY dijo Dios: Hagamos al hombre á nuestra imagen, conforme á nuestra semejanza; y señoree en los peces de la mar, y en las aves de los cielos, y en las bestias, y en toda la tierra, y en todo animal que anda arrastrando sobre la tierra.\n\nY crió Dios al hombre á su imagen, á imagen de Dios lo crió; varón y hembra los crió.\n\nY los bendijo Dios; y díjoles Dios: Fructificad y multiplicad, y henchid la tierra, y sojuzgadla, y señoread en los peces de la mar, y en las aves de los cielos, y en todas las bestias que se mueven sobre la tierra.\n\nY dijo Dios: He aquí que os he dado toda planta que da simiente, que está sobre la haz de toda la tierra, y todo árbol en que hay fruto de árbol que da simiente: seros han para comer.\n\nY á toda bestia de la tierra, y á todas las aves de los cielos, y á todo lo que se arrastra sobre la tierra, en que hay vida, toda planta verde les será para comer: y fué así.\n\nY vió Dios todo lo que había hecho, y he aquí que era bueno en gran manera. Y fué la tarde y la mañana el día sexto.`}]
-  },
-  { id:'genesis3',title:'Génesis 3',author:'La Biblia · Reina Valera 1909',category:'Antiguo Testamento',icon:'🐍',colors:['#4a2c1d','#7a4a2a'],
-    chapters:[{title:'La Caída',text:`Empero la serpiente era astuta, más que todos los animales del campo que Jehová Dios había hecho; la cual dijo á la mujer: ¿Conque Dios os ha dicho: No comáis de todo árbol del huerto?\n\nY la mujer respondió á la serpiente: Del fruto de los árboles del huerto comemos;\n\nMas del fruto del árbol que está en medio del huerto dijo Dios: No comeréis de él, ni le tocaréis, porque no muráis.\n\nEntonces la serpiente dijo á la mujer: No moriréis;\n\nMas sabe Dios que el día que comiereis de él, serán abiertos vuestros ojos, y seréis como dioses sabiendo el bien y el mal.\n\nY vió la mujer que el árbol era bueno para comer, y que era agradable á los ojos, y árbol codiciable para alcanzar la sabiduría; y tomó de su fruto, y comió; y dió también á su marido, el cual comió así como ella.\n\nY fueron abiertos los ojos de entrambos, y conocieron que estaban desnudos: entonces cosieron hojas de higuera, y se hicieron delantales.\n\nY oyeron la voz de Jehová Dios que se paseaba en el huerto al aire del día: y escondióse el hombre y su mujer de la presencia de Jehová Dios entre los árboles del huerto.\n\nY llamó Jehová Dios al hombre, y le dijo: ¿Dónde estás tú?\n\nY él respondió: Oí tu voz en el huerto, y tuve miedo, porque estaba desnudo; y escondíme.\n\nY díjole: ¿Quién te enseñó que estabas desnudo? ¿Has comido del árbol de que yo te mandé no comieses?\n\nY el hombre respondió: La mujer que me diste por compañera me dió del árbol, y yo comí.\n\nEntonces Jehová Dios dijo á la mujer: ¿Qué es lo que has hecho? Y dijo la mujer: La serpiente me engañó, y comí.\n\nY Jehová Dios dijo á la serpiente: Por cuanto esto hiciste, maldita serás entre todas las bestias y entre todos los animales del campo; sobre tu pecho andarás, y polvo comerás todos los días de tu vida:\n\nY enemistad pondré entre ti y la mujer, y entre tu simiente y la simiente suya; ésta te herirá en la cabeza, y tú le herirás en el calcañar.\n\nA la mujer dijo: Multiplicaré en gran manera tus dolores y tus preñeces; con dolor parirás los hijos; y á tu marido será tu deseo, y él se enseñoreará de ti.\n\nY al hombre dijo: Por cuanto obedeciste á la voz de tu mujer, y comiste del árbol de que te mandé diciendo, No comerás de él; maldita será la tierra por amor de ti; con dolor comerás de ella todos los días de tu vida;\n\nEspinos y cardos te producirá, y comerás hierba del campo;\n\nEn el sudor de tu rostro comerás el pan hasta que vuelvas á la tierra; porque de ella fuiste tomado: pues polvo eres, y al polvo serás tornado.\n\nY llamó el hombre el nombre de su mujer, Eva; por cuanto ella era madre de todos los vivientes.\n\nY Jehová Dios hizo al hombre y á su mujer túnicas de pieles, y vistiólos.\n\nY dijo Jehová Dios: He aquí el hombre es como uno de nosotros sabiendo el bien y el mal: ahora, pues, porque no alargue su mano, y tome también del árbol de la vida, y coma, y viva para siempre:\n\nY sacólo Jehová del huerto de Edén, para que labrase la tierra de que fué tomado.\n\nEchó, pues, fuera al hombre, y puso al oriente del huerto de Edén querubines, y una espada encendida que se revolvía á todos lados, para guardar el camino del árbol de la vida.`}]
-  },
-  { id:'exodo20',title:'Éxodo 20',author:'La Biblia · Reina Valera 1909',category:'Antiguo Testamento',icon:'📜',colors:['#7a2c1d','#b0452a'],
-    chapters:[{title:'Los Diez Mandamientos',text:`Y HABLÓ Dios todas estas palabras, diciendo:\n\nYo soy JEHOVÁ tu Dios, que te saqué de la tierra de Egipto, de casa de siervos.\n\nNo tendrás dioses ajenos delante de mí.\n\nNo te harás imagen, ni ninguna semejanza de cosa que esté arriba en el cielo, ni abajo en la tierra, ni en las aguas debajo de la tierra:\n\nNo te inclinarás á ellas, ni las honrarás; porque yo soy Jehová tu Dios, fuerte, celoso, que visito la maldad de los padres sobre los hijos, sobre los terceros y sobre los cuartos, á los que me aborrecen,\n\nY que hago misericordia en millares á los que me aman, y guardan mis mandamientos.\n\nNo tomarás el nombre de Jehová tu Dios en vano; porque no dará por inocente Jehová al que tomare su nombre en vano.\n\nAcordarte has del día del reposo, para santificarlo:\n\nSeis días trabajarás, y harás toda tu obra;\n\nMas el séptimo día será reposo para Jehová tu Dios: no hagas en él obra alguna, tú, ni tu hijo, ni tu hija, ni tu siervo, ni tu criada, ni tu bestia, ni tu extranjero que está dentro de tus puertas:\n\nPorque en seis días hizo Jehová los cielos y la tierra, la mar y todas las cosas que en ellos hay, y reposó en el séptimo día: por tanto Jehová bendijo el día del reposo y lo santificó.\n\nHonra á tu padre y á tu madre, porque tus días se alarguen en la tierra que Jehová tu Dios te da.\n\nNo matarás.\n\nNo cometerás adulterio.\n\nNo hurtarás.\n\nNo hablarás contra tu prójimo falso testimonio.\n\nNo codiciarás la casa de tu prójimo, no codiciarás la mujer de tu prójimo, ni su siervo, ni su criada, ni su buey, ni su asno, ni cosa alguna de tu prójimo.\n\nTodo el pueblo consideraba las voces, y las llamas, y el sonido de la bocina, y el monte que humeaba: y viéndolo el pueblo, temblaron, y pusiéronse de lejos.\n\nY dijeron á Moisés: Habla tú con nosotros, que nosotros oiremos; mas no hable Dios con nosotros, porque no muramos.\n\nY Moisés respondió al pueblo: No temáis; que para probaros vino Dios, y para que su temor esté delante de vosotros, para que no pequéis.\n\nEntonces el pueblo estuvo á lo lejos, y Moisés llegóse á la obscuridad donde Dios estaba.\n\nY Jehová dijo á Moisés: Así dirás á los hijos de Israel: Vosotros habéis visto que he hablado desde el cielo con vosotros.\n\nNo hagáis conmigo dioses de plata, ni dioses de oro os haréis.\n\nAltar de tierra harás para mí, y sacrificarás sobre él tus holocaustos y tus pacíficos, tus ovejas y tus vacas: en cualquier lugar donde yo hiciere que esté la memoria de mi nombre, vendré á ti, y te bendeciré.\n\nY si me hicieres altar de piedras, no las labres de cantería; porque si alzares tu pico sobre ella, la has profanado.\n\nNo subirás por gradas á mi altar, porque tu desnudez no sea junto á él descubierta.`}]
-  },
-  { id:'salmos23',title:'Salmos 23',author:'La Biblia · Reina Valera 1909',category:'Antiguo Testamento',icon:'🐑',colors:['#4b2e83','#7b4397'],
-    chapters:[{title:'Jehová es mi pastor',text:`JEHOVÁ es mi pastor; nada me faltará.\n\nEn lugares de delicados pastos me hará yacer: Junto á aguas de reposo me pastoreará.\n\nConfortará mi alma; Guiárame por sendas de justicia por amor de su nombre.\n\nAunque ande en valle de sombra de muerte, No temeré mal alguno; porque tú estarás conmigo: Tu vara y tu cayado me infundirán aliento.\n\nAderezarás mesa delante de mí, en presencia de mis angustiadores: Ungiste mi cabeza con aceite: mi copa está rebosando.\n\nCiertamente el bien y la misericordia me seguirán todos los días de mi vida: Y en la casa de Jehová moraré por largos días.`}]
-  },
-  { id:'salmos91',title:'Salmos 91',author:'La Biblia · Reina Valera 1909',category:'Antiguo Testamento',icon:'🛡️',colors:['#134e4a','#0f766e'],
-    chapters:[{title:'Morando bajo su sombra',text:`EL que habita al abrigo del Altísimo, morará bajo la sombra del Omnipotente.\n\nDiré yo á Jehová: Esperanza mía, y castillo mío; mi Dios, en quien confiaré.\n\nÉl te librará del lazo del cazador: De la peste destructora.\n\nCon sus plumas te cubrirá, Y debajo de sus alas estarás seguro: Escudo y adarga es su verdad.\n\nNo temerás el terror de la noche, Ni la saeta que vuele de día:\n\nNi la pestilencia que ande en oscuridad, Ni la mortandad que en medio del día destruya.\n\nCaerán á tu lado mil, Y diez mil á tu diestra: Mas á ti no llegará.\n\nCiertamente con tus ojos mirarás, Y verás la recompensa de los impíos.\n\nPorque tú has puesto á Jehová, que es mi esperanza, Al Altísimo por tu habitación,\n\nNo te sobrevendrá mal, Ni plaga tocará tu morada.\n\nPues que á sus ángeles mandará acerca de ti, Que te guarden en todos tus caminos.\n\nEn las manos te llevarán, Porque tu pie no tropiece en piedra.\n\nSobre el león y el basilisco pisarás; Hollarás al cachorro del león y al dragón.\n\nPor cuanto en mí ha puesto su voluntad, yo también lo libraré: Pondrélo en alto, por cuanto ha conocido mi nombre.\n\nMe invocará, y yo le responderé: Con él estaré yo en la angustia: Lo libraré, y le glorificaré.\n\nSaciarélo de larga vida, Y mostraréle mi salud.`}]
-  },
-  { id:'proverbios3',title:'Proverbios 3',author:'La Biblia · Reina Valera 1909',category:'Antiguo Testamento',icon:'🕯️',colors:['#b06a2c','#d98c3f'],
-    chapters:[{title:'Confía en Jehová',text:`HIJO mío, no te olvides de mi ley; Y tu corazón guarde mis mandamientos:\n\nPorque largura de días, y años de vida Y paz te aumentarán.\n\nMisericordia y verdad no te desamparen; Atalas á tu cuello, Escríbelas en la tabla de tu corazón:\n\nY hallarás gracia y buena opinión En los ojos de Dios y de los hombres.\n\nFíate de Jehová de todo tu corazón, Y no estribes en tu prudencia.\n\nReconócelo en todos tus caminos, Y él enderezará tus veredas.\n\nNo seas sabio en tu opinión: Teme á Jehová, y apártate del mal;\n\nPorque será medicina á tu ombligo, Y tuétano á tus huesos.\n\nHonra á Jehová de tu sustancia, Y de las primicias de todos tus frutos;\n\nY serán llenas tus trojes con abundancia, Y tus lagares rebosarán de mosto.\n\nNo deseches, hijo mío, el castigo de Jehová; Ni te fatigues de su corrección:\n\nPorque Jehová al que ama castiga, Como el padre al hijo á quien quiere.\n\nBienaventurado el hombre que halla la sabiduría, Y que obtiene la inteligencia:\n\nPorque su mercadería es mejor que la mercadería de la plata, Y sus frutos más que el oro fino.\n\nMás preciosa es que las piedras preciosas; Y todo lo que puedes desear, no se puede comparar á ella.\n\nLargura de días está en su mano derecha; En su izquierda, riquezas y honra.\n\nSus caminos son caminos deleitosos, Y todas sus veredas paz.\n\nElla es árbol de vida á los que de ella asen: Y bienaventurados son los que la mantienen.\n\nJehová con sabiduría fundó la tierra; Afirmó los cielos con inteligencia.\n\nCon su ciencia se partieron los abismos, Y destilan el rocío los cielos.\n\nHijo mío, no se aparten estas cosas de tus ojos; Guarda la ley y el consejo;\n\nY serán vida á tu alma, Y gracia á tu cuello.\n\nEntonces andarás por tu camino confiadamente, Y tu pie no tropezará.\n\nCuando te acostares, no tendrás temor; Antes te acostarás, y tu sueño será suave.\n\nNo tendrás temor de pavor repentino, Ni de la ruina de los impíos cuando viniere:\n\nPorque Jehová será tu confianza, Y él preservará tu pie de quedar preso.\n\nNo detengas el bien de sus dueños, Cuando tuvieres poder para hacerlo.\n\nNo digas á tu prójimo: Ve, y vuelve, Y mañana te daré; Cuando tienes contigo qué darle.\n\nNo intentes mal contra tu prójimo, Estando él confiadamente contigo.\n\nNo tengas pleito con hombre sin causa, Si no te ha hecho agravio.\n\nNo envidies al hombre injusto, Ni escojas alguno de sus caminos.\n\nPorque el perverso es abominado de Jehová: Mas su secreto es con los rectos.\n\nLa maldición de Jehová está en la casa del impío; Mas él bendecirá la morada de los justos.\n\nCiertamente él escarnecerá á los escarnecedores, Y á los humildes dará gracia.\n\nLos sabios heredarán honra: Mas los necios sostendrán ignominia.`}]
-  },
-  { id:'isaias40',title:'Isaías 40',author:'La Biblia · Reina Valera 1909',category:'Antiguo Testamento',icon:'🕊️',colors:['#5c2c4d','#8e3f76'],
-    chapters:[{title:'Consolad a mi pueblo',text:`CONSOLAOS, consolaos, pueblo mío, dice vuestro Dios.\n\nHablad al corazón de Jerusalem: decidle á voces que su tiempo es ya cumplido, que su pecado es perdonado; que doble ha recibido de la mano de Jehová por todos sus pecados.\n\nVoz que clama en el desierto: Barred camino á Jehová: enderezad calzada en la soledad á nuestro Dios.\n\nTodo valle sea alzado, y bájese todo monte y collado; y lo torcido se enderece, y lo áspero se allane.\n\nY se manifestará la gloria de Jehová, y toda carne juntamente la verá; que la boca de Jehová habló.\n\nVoz que decía: Da voces. Y yo respondí: ¿Qué tengo que decir á voces? Que toda carne es hierba, y toda su gloria como flor del campo:\n\nSécase la hierba, cáese la flor: porque el viento de Jehová ha soplado sobre ella; verdaderamente hierba es el pueblo.\n\nSécase la hierba, cáese la flor: mas la palabra del Dios nuestro permanece para siempre.\n\nSúbete sobre un monte alto, anunciadora de Sión; levanta fuertemente tu voz, anunciadora de Jerusalem; levántala, no temas; di á las ciudades de Judá: He aquí el Dios vuestro!\n\nHe aquí que el Señor Jehová vendrá con fortaleza, y su brazo señoreará; he aquí que su recompensa viene con él, y su paga delante de su rostro.\n\nComo pastor apacentará su rebaño; en su brazo cogerá los corderos, y en su seno los llevará; pastoreará suavemente las paridas.\n\n¿Quién midió las aguas con el hueco de su mano, y tomó de un palmo el cielo, y caber hizo el polvo de la tierra en un celemín, y pesó los montes con balanza, y con pesas los collados?\n\n¿Quién enseñó al Espíritu de Jehová, ó le aconsejó enseñándole?\n\n¿A quién demandó consejo para ser avisado? ¿Quién le enseñó el camino del juicio, ó le enseñó ciencia, ó le mostró la senda de la prudencia?\n\nHe aquí que las naciones son como gota de un acetre, y como la menudencia de las balanzas estimadas: he aquí que él tomó las islas como polvo.\n\nNi el Líbano bastará para el fuego, ni todos sus animales para el sacrificio.\n\nComo nada son todas las gentes delante de él; y en su comparación serán estimadas en menos que nada, y que lo que no es.\n\n¿A qué pues haréis semejante á Dios, ó qué imagen le compondréis?\n\nEl artífice apareja la imagen de talla, el platero le extiende el oro, y le funde cadenas de plata.\n\nEl pobre escoge, para ofrecerle, madera que no se corrompa; búscase un maestro sabio, que le haga una imagen de talla que no se mueva.\n\n¿No sabéis? ¿No habéis oído? ¿Nunca os lo han dicho desde el principio? ¿No habéis sido enseñados desde que la tierra se fundó?\n\nÉl está sentado sobre el círculo de la tierra, cuyos moradores son como langostas: él extiende los cielos como una cortina, tiéndelos como una tienda para morar:\n\nÉl torna en nada los poderosos, y á los que gobiernan la tierra hace como cosa vana.\n\nComo si nunca fueran plantados, como si nunca fueran sembrados, como si nunca su tronco hubiera tenido raíz en la tierra; así que sopla en ellos y se secan, y el torbellino los lleva como hojarasca.\n\n¿A qué pues me haréis semejante, ó seré asimilado? dice el Santo.\n\nLevantad en alto vuestros ojos, y mirad quién crió estas cosas: él saca por cuenta su ejército: á todas llama por sus nombres; ninguna faltará: tal es la grandeza de su fuerza, y su poder y virtud.\n\n¿Por qué dices, oh Jacob, y hablas tú, Israel: Mi camino es escondido de Jehová, y de mi Dios pasó mi juicio?\n\n¿No has sabido, no has oído que el Dios del siglo es Jehová, el cual crió los términos de la tierra? No se trabaja, ni se fatiga con cansancio, y su entendimiento no hay quien lo alcance.\n\nÉl da esfuerzo al cansado, y multiplica las fuerzas al que no tiene ningunas.\n\nLos mancebos se fatigan y se cansan, los mozos flaquean y caen:\n\nMas los que esperan á Jehová tendrán nuevas fuerzas; levantarán las alas como águilas; correrán, y no se cansarán; caminarán, y no se fatigarán.`}]
-  },
-  { id:'juan1',title:'Juan 1',author:'La Biblia · Reina Valera 1909',category:'Nuevo Testamento',icon:'✨',colors:['#8c2f39','#b23a48'],
-    chapters:[{title:'El Verbo hecho carne',text:`EN el principio era el Verbo, y el Verbo era con Dios, y el Verbo era Dios.\n\nEste era en el principio con Dios.\n\nTodas las cosas por él fueron hechas; y sin él nada de lo que es hecho, fué hecho.\n\nEn él estaba la vida, y la vida era la luz de los hombres.\n\nY la luz en las tinieblas resplandece; mas las tinieblas no la comprendieron.\n\nFué un hombre enviado de Dios, el cual se llamaba Juan.\n\nEste vino por testimonio, para que diese testimonio de la luz, para que todos creyesen por él.\n\nNo era él la luz, sino para que diese testimonio de la luz.\n\nAquél era la luz verdadera, que alumbra á todo hombre que viene á este mundo.\n\nEn el mundo estaba, y el mundo por él fué hecho; pero el mundo no le conoció.\n\nA lo suyo vino, y los suyos no le recibieron.\n\nMas á todos los que le recibieron, dióles potestad de ser hechos hijos de Dios, á los que creen en su nombre:\n\nLos cuales no son engendrados de sangre, ni de voluntad de carne, ni de voluntad de varón, mas de Dios.\n\nY aquel Verbo fué hecho carne, y habitó entre nosotros (y vimos su gloria, gloria como del unigénito del Padre), lleno de gracia y de verdad.\n\nJuan dió testimonio de él, y clamó diciendo: Este es del que yo decía: El que viene tras mí, es antes de mí: porque era primero que yo.\n\nPorque de su plenitud tomamos todos, y gracia por gracia.\n\nPorque la ley por Moisés fué dada: mas la gracia y la verdad por Jesucristo fué hecha.\n\nA Dios nadie le vió jamás: el unigénito Hijo, que está en el seno del Padre, él le declaró.\n\nY este es el testimonio de Juan, cuando los Judíos enviaron de Jerusalem sacerdotes y Levitas, que le preguntasen: ¿Tú, quién eres?\n\nY confesó, y no negó; mas declaró: No soy yo el Cristo.\n\nY le preguntaron: ¿Qué pues? ¿Eres tú Elías? Dijo: No soy. ¿Eres tú el profeta? Y respondió: No.\n\nDijéronle: ¿Pues quién eres? para que demos respuesta á los que nos enviaron. ¿Qué dices de ti mismo?\n\nDijo: Yo soy la voz del que clama en el desierto: Enderezad el camino del Señor, como dijo Isaías profeta.\n\nY los que habían sido enviados eran de los Fariseos.\n\nY preguntáronle, y dijéronle: ¿Por qué pues bautizas, si tú no eres el Cristo, ni Elías, ni el profeta?\n\nY Juan les respondió diciendo: Yo bautizo con agua; mas en medio de vosotros está uno que vosotros no sabéis.\n\nEste es el que viene después de mí, el que es antes de mí, del cual yo no soy digno de desatar la correa del calzado.\n\nEstas cosas sucedieron en Bethábara de la otra parte del Jordán, donde Juan estaba bautizando.\n\nEl siguiente día ve Juan á Jesús que venía á él, y dice: He aquí el Cordero de Dios, que quita el pecado del mundo.\n\nEste es del que dije: Tras mí viene un hombre, que es antes de mí: porque era primero que yo.\n\nY yo no le conocía; mas para que fuese manifestado á Israel, por esto vine yo bautizando con agua.\n\nY dió Juan testimonio, diciendo: Vi al Espíritu que descendía del cielo como paloma, y reposó sobre él.\n\nY yo no le conocía; pero el que me envió á bautizar con agua, aquél me dijo: Sobre quien vieres descender el Espíritu, y que reposa sobre él, éste es el que bautiza con el Espíritu Santo.\n\nY yo le vi, y he dado testimonio que éste es el Hijo de Dios.\n\nEl siguiente día otra vez estaba Juan, y dos de sus discípulos.\n\nY mirando á Jesús que andaba por allí, dijo: He aquí el Cordero de Dios.\n\nY oyéronle los dos discípulos hablar, y siguieron á Jesús.\n\nY volviéndose Jesús, y viendo que le seguían, les dice: ¿Qué buscáis? Ellos le dijeron: Rabbí, (que declarado quiere decir Maestro) ¿dónde moras?\n\nDíceles: Venid y ved. Fuéron, y vieron donde moraba, y quedáronse con él aquel día: porque era como la hora de las diez.\n\nEra Andrés, hermano de Simón Pedro, uno de los dos que habían oído de Juan, y le habían seguido.\n\nEste halló primero á su hermano Simón, y díjole: Hemos hallado al Mesías (que declarado es, el Cristo).\n\nY le trajo á Jesús. Y mirándole Jesús, dijo: Tú eres Simón, hijo de Jonás: tú serás llamado Cephas (que quiere decir, Piedra).\n\nEl siguiente día quiso Jesús ir á Galilea, y halla á Felipe, al cual dijo: Sígueme.\n\nY era Felipe de Bethsaida, la ciudad de Andrés y de Pedro.\n\nFelipe halló á Nathanael, y díjole: Hemos hallado á aquel de quien escribió Moisés en la ley, y los profetas: á Jesús, el hijo de José, de Nazaret.\n\nY díjole Nathanael: ¿De Nazaret puede haber algo de bueno? Dícele Felipe: Ven y ve.\n\nJesús vió á Nathanael que venía á él, y dijo de él: He aquí un verdadero Israelita, en el cual no hay engaño.\n\nDícele Nathanael: ¿De dónde me conoces? Respondió Jesús, y díjole: Antes que Felipe te llamara, cuando estabas debajo de la higuera, te vi.\n\nRespondió Nathanael, y díjole: Rabbí, tú eres el Hijo de Dios; tú eres el Rey de Israel.\n\nRespondió Jesús y díjole: ¿Porque te dije, te vi debajo de la higuera, crees? Cosas mayores que estas verás.\n\nY dícele: De cierto, de cierto os digo: De aquí adelante veréis el cielo abierto, y los ángeles de Dios que suben y descienden sobre el Hijo del hombre.`}]
-  },
-  { id:'juan14',title:'Juan 14',author:'La Biblia · Reina Valera 1909',category:'Nuevo Testamento',icon:'🕊️',colors:['#2c3e50','#4a6572'],
-    chapters:[{title:'El camino, la verdad y la vida',text:`NO se turbe vuestro corazón; creéis en Dios, creed también en mí.\n\nEn la casa de mi Padre muchas moradas hay: de otra manera os lo hubiera dicho; voy, pues, á preparar lugar para vosotros.\n\nY si me fuere, y os aparejare lugar, vendré otra vez, y os tomaré á mí mismo: para que donde yo estoy, vosotros también estéis.\n\nY sabéis á dónde yo voy; y sabéis el camino.\n\nDícele Tomás: Señor, no sabemos á dónde vas: ¿cómo, pues, podemos saber el camino?\n\nJesús le dice: Yo soy el camino, y la verdad, y la vida: nadie viene al Padre, sino por mí.\n\nSi me conocieseis, también á mi Padre conocierais: y desde ahora le conocéis, y le habéis visto.\n\nDícele Felipe: Señor, muéstranos el Padre, y nos basta.\n\nJesús le dice: ¿Tanto tiempo ha que estoy con vosotros, y no me has conocido, Felipe? El que me ha visto, ha visto al Padre; ¿cómo, pues, dices tú: Muéstranos el Padre?\n\n¿No crees que yo soy en el Padre, y el Padre en mí? Las palabras que yo os hablo, no las hablo de mí mismo: mas el Padre que está en mí, él hace las obras.\n\nCreedme que yo soy en el Padre, y el Padre en mí: de otra manera, creedme por las mismas obras.\n\nDe cierto, de cierto os digo: El que en mí cree, las obras que yo hago también él las hará; y mayores que éstas hará; porque yo voy al Padre.\n\nY todo lo que pidiereis al Padre en mi nombre, esto haré, para que el Padre sea glorificado en el Hijo.\n\nSi algo pidiereis en mi nombre, yo lo haré.\n\nSi me amáis, guardad mis mandamientos;\n\nY yo rogaré al Padre, y os dará otro Consolador, para que esté con vosotros para siempre:\n\nAl Espíritu de verdad, al cual el mundo no puede recibir, porque no le ve, ni le conoce: mas vosotros le conocéis; porque está con vosotros, y será en vosotros.\n\nNo os dejaré huérfanos: vendré á vosotros.\n\nAun un poquito, y el mundo no me verá más; empero vosotros me veréis; porque yo vivo, y vosotros también viviréis.\n\nEn aquel día vosotros conoceréis que yo estoy en mi Padre, y vosotros en mí, y yo en vosotros.\n\nEl que tiene mis mandamientos, y los guarda, aquél es el que me ama; y el que me ama, será amado de mi Padre, y yo le amaré, y me manifestaré á él.\n\nDícele Judas, no el Iscariote: Señor, ¿qué hay porque te hayas de manifestar á nosotros, y no al mundo?\n\nRespondió Jesús, y díjole: El que me ama, mi palabra guardará; y mi Padre le amará, y vendremos á él, y haremos con él morada.\n\nEl que no me ama, no guarda mis palabras: y la palabra que habéis oído, no es mía, sino del Padre que me envió.\n\nEstas cosas os he hablado estando con vosotros.\n\nMas el Consolador, el Espíritu Santo, al cual el Padre enviará en mi nombre, él os enseñará todas las cosas, y os recordará todas las cosas que os he dicho.\n\nLa paz os dejo, mi paz os doy: no como el mundo la da, yo os la doy. No se turbe vuestro corazón, ni tenga miedo.\n\nOísteis que yo os dijo: Voy, y vengo á vosotros. Si me amarais, os habríais regocijado, porque he dicho que voy al Padre: porque el Padre mayor es que yo.\n\nY ahora os lo he dicho antes que se haga; para que cuando se hiciere, creáis.\n\nYa no hablaré mucho con vosotros: porque viene el príncipe de este mundo; mas no tiene nada en mí.\n\nEmpero para que conozca el mundo que amo al Padre, y como el Padre me dió el mandamiento, así hago. Levantaos, vamos de aquí.`}]
-  },
-  { id:'romanos8',title:'Romanos 8',author:'La Biblia · Reina Valera 1909',category:'Nuevo Testamento',icon:'📜',colors:['#1f3a5f','#2e5b8a'],
-    chapters:[{title:'La vida en el Espíritu',text:`AHORA pues, ninguna condenación hay para los que están en Cristo Jesús, los que no andan conforme á la carne, mas conforme al espíritu.\n\nPorque la ley del Espíritu de vida en Cristo Jesús me ha librado de la ley del pecado y de la muerte.\n\nPorque lo que era imposible á la ley, por cuanto era débil por la carne, Dios enviando á su Hijo en semejanza de carne de pecado, y á causa del pecado, condenó al pecado en la carne;\n\nPara que la justicia de la ley fuese cumplida en nosotros, que no andamos conforme á la carne, mas conforme al espíritu.\n\nPorque los que viven conforme á la carne, de las cosas que son de la carne se ocupan; mas los que conforme al espíritu, de las cosas del espíritu.\n\nPorque la intención de la carne es muerte; mas la intención del espíritu, vida y paz:\n\nPor cuanto la intención de la carne es enemistad contra Dios; porque no se sujeta á la ley de Dios, ni tampoco puede.\n\nAsí que, los que están en la carne no pueden agradar á Dios.\n\nMas vosotros no estáis en la carne, sino en el espíritu, si es que el Espíritu de Dios mora en vosotros. Y si alguno no tiene el Espíritu de Cristo, el tal no es de Cristo.\n\nEmpero si Cristo está en vosotros, el cuerpo á la verdad está muerto á causa del pecado; mas el espíritu vive á causa de la justicia.\n\nY si el Espíritu de aquel que levantó de los muertos á Jesús mora en vosotros, el que levantó á Cristo Jesús de los muertos, vivificará también vuestros cuerpos mortales por su Espíritu que mora en vosotros.\n\nAsí que, hermanos, deudores somos, no á la carne, para que vivamos conforme á la carne:\n\nPorque si viviereis conforme á la carne, moriréis; mas si por el espíritu mortificareis las obras de la carne, viviréis.\n\nPorque todos los que son guiados por el Espíritu de Dios, los tales son hijos de Dios.\n\nPorque no habéis recibido el espíritu de servidumbre para estar otra vez en temor; mas habéis recibido el espíritu de adopción, por el cual clamamos, Abba, Padre.\n\nPorque el mismo Espíritu da testimonio á nuestro espíritu que somos hijos de Dios.\n\nY si hijos, también herederos; herederos de Dios, y coherederos de Cristo; si empero padecemos juntamente con él, para que juntamente con él seamos glorificados.\n\nPorque tengo por cierto que lo que en este tiempo se padece, no es de comparar con la gloria venidera que en nosotros ha de ser manifestada.\n\nPorque el continuo anhelar de las criaturas espera la manifestación de los hijos de Dios.\n\nPorque las criaturas sujetas fueron á vanidad, no de grado, mas por causa del que las sujetó con esperanza,\n\nQue también las mismas criaturas serán libradas de la servidumbre de corrupción en la libertad gloriosa de los hijos de Dios.\n\nPorque sabemos que todas las criaturas gimen á una, y á una están de parto hasta ahora.\n\nY no sólo ellas, mas también nosotros mismos, que tenemos las primicias del Espíritu, nosotros también gemimos dentro de nosotros mismos, esperando la adopción, es á saber, la redención de nuestro cuerpo.\n\nPorque en esperanza somos salvos; mas la esperanza que se ve, no es esperanza; porque lo que alguno ve, ¿á qué esperarlo?\n\nEmpero si lo que no vemos esperamos, por paciencia esperamos.\n\nY asimismo también el Espíritu ayuda nuestra flaqueza: porque qué hemos de pedir como conviene, no lo sabemos; sino que el mismo Espíritu pide por nosotros con gemidos indecibles.\n\nMas el que escudriña los corazones, sabe qué es lo que el Espíritu quiere, porque conforme á Dios, pide por los santos.\n\nY sabemos que á los que á Dios aman, todas las cosas les ayudan á bien, es á saber, á los que conforme al propósito son llamados.\n\nPorque á los que antes conoció, también predestinó para que fuesen hechos conformes á la imagen de su Hijo, para que él sea el primogénito entre muchos hermanos;\n\nY á los que predestinó, á éstos también llamó; y á los que llamó, á éstos también justificó; y á los que justificó, á éstos también glorificó.\n\n¿Pues qué diremos á esto? Si Dios por nosotros, ¿quién contra nosotros?\n\nEl que aun á su propio Hijo no perdonó, antes le entregó por todos nosotros, ¿cómo no nos dará también con él todas las cosas?\n\n¿Quién acusará á los escogidos de Dios? Dios es el que justifica.\n\n¿Quién es el que condenará? Cristo es el que murió; mas aun el que también resucitó, el que además está á la diestra de Dios, el que también intercede por nosotros.\n\n¿Quién nos apartará del amor de Cristo? tribulación, ó angustia, ó persecución, ó hambre, ó desnudez, ó peligro, ó cuchillo?\n\nComo está escrito: Por causa de ti somos muertos todo el tiempo: Somos estimados como ovejas de matadero.\n\nAntes, en todas estas cosas hacemos más que vencer por medio de aquel que nos amó.\n\nPor lo cual estoy cierto que ni la muerte, ni la vida, ni ángeles, ni principados, ni potestades, ni lo presente, ni lo por venir,\n\nNi lo alto, ni lo bajo, ni ninguna criatura nos podrá apartar del amor de Dios, que es en Cristo Jesús Señor nuestro.`}]
-  },
-  { id:'apocalipsis21',title:'Apocalipsis 21',author:'La Biblia · Reina Valera 1909',category:'Nuevo Testamento',icon:'🌅',colors:['#3b1f2b','#6b2d3c'],
-    chapters:[{title:'Cielo nuevo y tierra nueva',text:`Y VI un cielo nuevo, y una tierra nueva: porque el primer cielo y la primera tierra se fueron, y el mar ya no es.\n\nY yo Juan vi la santa ciudad, Jerusalem nueva, que descendía del cielo, de Dios, dispuesta como una esposa ataviada para su marido.\n\nY oí una gran voz del cielo que decía: He aquí el tabernáculo de Dios con los hombres, y morará con ellos; y ellos serán su pueblo, y el mismo Dios será su Dios con ellos.\n\nY limpiará Dios toda lágrima de los ojos de ellos; y la muerte no será más; y no habrá más llanto, ni clamor, ni dolor: porque las primeras cosas son pasadas.\n\nY el que estaba sentado en el trono dijo: He aquí, yo hago nuevas todas las cosas. Y me dijo: Escribe; porque estas palabras son fieles y verdaderas.\n\nY díjome: Hecho es. Yo soy Alpha y Omega, el principio y el fin. Al que tuviere sed, yo le daré de la fuente del agua de la vida gratuitamente.\n\nEl que venciere, poseerá todas las cosas; y yo seré su Dios, y él será mi hijo.\n\nMas á los temerosos é incrédulos, á los abominables y homicidas, á los fornicarios y hechiceros, y á los idólatras, y á todos los mentirosos, su parte será en el lago ardiendo con fuego y azufre, que es la muerte segunda.\n\nY vino á mí uno de los siete ángeles que tenían las siete copas llenas de las postreras plagas, y habló conmigo, diciendo: Ven acá, yo te mostraré la desposada, la esposa del Cordero.\n\nY llevóme en Espíritu á un grande y alto monte, y me mostró la grande ciudad santa de Jerusalem, que descendía del cielo de Dios,\n\nTeniendo la claridad de Dios: y su luz era semejante á una piedra preciosísima, como piedra de jaspe, resplandeciente como cristal.\n\nY tenía un muro grande y alto con doce puertas; y en las puertas, doce ángeles, y nombres escritos que son los nombres de las doce tribus de los hijos de Israel:\n\nAl oriente tres puertas; al norte tres puertas; al mediodía tres puertas; al poniente tres puertas.\n\nY el muro de la ciudad tenía doce fundamentos, y en ellos los doce nombres de los doce apóstoles del Cordero.\n\nY el que hablaba conmigo, tenía una medida de caña de oro para medir la ciudad, y sus puertas, y su muro.\n\nY la ciudad está situada y asentada en cuadro, y su largura es tanta como su anchura: y él midió la ciudad con la caña, doce mil estadios: la largura y la altura y la anchura de ella son iguales.\n\nY midió su muro, ciento cuarenta y cuatro codos, de medida de hombre, la cual es del ángel.\n\nY el material de su muro era de jaspe: mas la misma ciudad era oro puro, semejante á vidrio claro.\n\nY los fundamentos del muro de la ciudad estaban adornados con toda piedra preciosa. El primer fundamento era jaspe; el segundo, zafiro; el tercero, calcedonia; el cuarto, esmeralda;\n\nEl quinto, sardónica; el sexto, sardio; el séptimo, crisólito; el octavo, berilo; el noveno, topacio; el décimo, crisopraso; el undécimo, jacinto; el duodécimo, amatista.\n\nY las doce puertas eran doce perlas; cada una de las puertas era una perla. Y la calle de la ciudad era oro puro, como vidrio transparente.\n\nY no vi en ella templo; porque el Señor Dios Todopoderoso es el templo de ella, y el Cordero.\n\nY la ciudad no tenía necesidad de sol, ni de luna, para que resplandezcan en ella: porque la claridad de Dios la iluminó, y el Cordero era su lumbrera.\n\nY las naciones que hubieren sido salvas andarán en la lumbre de ella; y los reyes de la tierra traerán su gloria y honor á ella.\n\nY sus puertas nunca serán cerradas de día, pues allí no habrá noche;\n\nY llevarán la gloria y la honra de las naciones á ella.\n\nNo entrará en ella ninguna cosa sucia, ó que hace abominación y mentira; sino solamente los que están escritos en el libro de la vida del Cordero.`}]
-  },
-  { id:'devocional',title:'Devocional: Pan Diario',author:'Reflexiones basadas en la Escritura',category:'Devocionales',icon:'☀️',colors:['#b06a2c','#d98c3f'],
+const API_BASE = 'https://api.getbible.net/v2/valera';
+
+/* ============================================================
+   BIBLIOTECA — Libros con número de capítulos completo
+   Los textos se cargan dinámicamente desde la API.
+   ============================================================ */
+const BOOKS = [
+  { id:'genesis', title:'Génesis', apiBook:1, chapters:50, icon:'🌍', colors:['#1e3c72','#2a5298'], category:'Antiguo Testamento', author:'La Biblia · Reina Valera 1909' },
+  { id:'exodo', title:'Éxodo', apiBook:2, chapters:40, icon:'🔥', colors:['#7a2c1d','#b0452a'], category:'Antiguo Testamento', author:'La Biblia · Reina Valera 1909' },
+  { id:'salmos', title:'Salmos', apiBook:19, chapters:150, icon:'🎵', colors:['#4b2e83','#7b4397'], category:'Antiguo Testamento', author:'La Biblia · Reina Valera 1909' },
+  { id:'proverbios', title:'Proverbios', apiBook:20, chapters:31, icon:'🕯️', colors:['#b06a2c','#d98c3f'], category:'Antiguo Testamento', author:'La Biblia · Reina Valera 1909' },
+  { id:'isaias', title:'Isaías', apiBook:23, chapters:66, icon:'🕊️', colors:['#5c2c4d','#8e3f76'], category:'Antiguo Testamento', author:'La Biblia · Reina Valera 1909' },
+  { id:'juan', title:'El Evangelio de Juan', apiBook:43, chapters:21, icon:'✨', colors:['#8c2f39','#b23a48'], category:'Nuevo Testamento', author:'La Biblia · Reina Valera 1909' },
+  { id:'romanos', title:'Romanos', apiBook:45, chapters:16, icon:'📜', colors:['#1f3a5f','#2e5b8a'], category:'Nuevo Testamento', author:'La Biblia · Reina Valera 1909' },
+  { id:'apocalipsis', title:'Apocalipsis', apiBook:66, chapters:22, icon:'🌅', colors:['#3b1f2b','#6b2d3c'], category:'Nuevo Testamento', author:'La Biblia · Reina Valera 1909' },
+  {
+    id:'devocional', title:'Devocional: Pan Diario', author:'Reflexiones basadas en la Escritura', category:'Devocionales', icon:'☀️', colors:['#b06a2c','#d98c3f'],
     chapters:[
       {title:'Meditación 1 · Empezar con gratitud',text:`Al comenzar el día, antes de que cualquier preocupación toque la puerta de tu corazón, detente un momento y da gracias. La gratitud no es un sentimiento que dependa de las circunstancias; es una decisión que transforma la manera en que miras todo lo demás.\n\nCuando agradeces por lo poco, Dios te confía lo mucho. La gratitud abre los ojos del alma para reconocer la mano del Señor en lo ordinario: el pan sobre la mesa, el abrazo de un hermano, el aire que respiras.\n\nHoy, antes de pedir, agradece. Antes de quejarte, bendice. Y verás cómo el cielo se vuelve cercano y tu carga se vuelve ligera.`},
       {title:'Meditación 2 · Confiar en la tormenta',text:`No toda tormenta es señal de que vas por mal camino. A veces, la tormenta es la manera en que Dios te enseña a sostenerte, no en tus fuerzas, sino en las suyas.\n\nJesús no prometió un mar siempre tranquilo; prometió estar en la barca. En medio del viento y las olas, su voz sigue diciendo: No temas, yo estoy contigo.\n\nSi hoy el viento arrecia, no mires tanto las olas; mira al que camina sobre ellas. Él no llega tarde; llega en el momento exacto en que necesitas aprender a confiar.`},
@@ -336,7 +318,7 @@ const sheetBg = $('#sheetBg'), sheet = $('#sheet'), sheetContent = $('#sheetCont
 /* ============================================================
    ESTADO
    ============================================================ */
-const state = { category:'Todos', query:'', book:null, chapterIndex:0, speed:0.85, voices:[], voice:null, boundaryFired:false };
+const state = { category:'Todos', query:'', book:null, chapterIndex:0, speed:0.85, voices:[], voice:null, boundaryFired:false, loading:false };
 const SPEEDS = [0.7, 0.8, 0.85, 0.9, 1.0, 1.1, 1.25];
 const tts = { paragraphs:[], index:0, playing:false, utterance:null, wordSpans:[], charLengths:[], totalChars:0, boundaryTimer:null };
 
@@ -395,13 +377,13 @@ pfVoice.addEventListener('change', () => {
    RENDER
    ============================================================ */
 function renderFilters(){
-  const cats = ['Todos', ...new Set(LIBRARY.map(b => b.category))];
+  const cats = ['Todos', ...new Set(BOOKS.map(b => b.category))];
   filtersEl.innerHTML = cats.map(c => `<button class="chip${c === state.category ? ' active' : ''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
 }
 
 function renderLibrary(){
   const q = state.query.trim().toLowerCase();
-  const list = LIBRARY.filter(b => {
+  const list = BOOKS.filter(b => {
     const okCat = state.category === 'Todos' || b.category === state.category;
     const okQ = !q || b.title.toLowerCase().includes(q) || b.author.toLowerCase().includes(q) || b.category.toLowerCase().includes(q);
     return okCat && okQ;
@@ -419,7 +401,7 @@ function renderLibrary(){
         <span class="cat">${esc(b.category)}</span>
         <h3>${esc(b.title)}</h3>
         <p class="author">${esc(b.author)}</p>
-        <div class="meta">🎧 ${b.chapters.length} ${b.chapters.length===1?'capítulo':'capítulos'}</div>
+        <div class="meta">🎧 ${typeof b.chapters === 'number' ? b.chapters + ' capítulos' : b.chapters.length + ' meditaciones'}</div>
       </div>
     </article>`).join('');
 }
@@ -431,25 +413,66 @@ function openSheet(){ sheet.classList.add('open'); sheetBg.classList.add('open')
 function closeSheet(){ sheet.classList.remove('open'); sheetBg.classList.remove('open'); document.body.style.overflow = ''; }
 
 function showChapterList(book){
+  const total = typeof book.chapters === 'number' ? book.chapters : book.chapters.length;
+  const isDev = typeof book.chapters !== 'number';
+
+  let itemsHTML = '';
+  for (let i = 0; i < total; i++){
+    const chNum = i + 1;
+    const active = state.book && state.book.id === book.id && state.chapterIndex === i;
+    const title = isDev ? book.chapters[i].title : `Capítulo ${chNum}`;
+    itemsHTML += `<li class="chapter-item${active?' active':''}" data-book="${book.id}" data-index="${i}">
+      <span class="n">${chNum}</span><span class="t">${esc(title)}</span><span class="s">${active?'🔊':'▶'}</span>
+    </li>`;
+  }
+
   sheetContent.innerHTML = `
     <div class="sheet-head">
       <div class="sc" style="background:${grad(book.colors)}">${book.icon}</div>
-      <div><h2>${esc(book.title)}</h2><p>${esc(book.author)} · ${book.chapters.length} capítulos</p></div>
+      <div><h2>${esc(book.title)}</h2><p>${esc(book.author)} · ${total} ${isDev?'meditaciones':'capítulos'}</p></div>
     </div>
-    <ol class="chapter-list">
-      ${book.chapters.map((ch, i) => {
-        const active = state.book && state.book.id === book.id && state.chapterIndex === i;
-        return `<li class="chapter-item${active?' active':''}" data-book="${book.id}" data-index="${i}">
-          <span class="n">${i+1}</span><span class="t">${esc(ch.title)}</span><span class="s">${active?'🔊':'▶'}</span>
-        </li>`;
-      }).join('')}
-    </ol>`;
+    <ol class="chapter-list">${itemsHTML}</ol>`;
   openSheet();
 }
 
-function showReader(book, chapterIndex){
-  const ch = book.chapters[chapterIndex];
-  const pars = ch.text.split(/\n\n+/);
+/* ============================================================
+   CARGA DE TEXTO DESDE LA API
+   ============================================================ */
+async function fetchChapterText(book, chapterNum){
+  const url = `${API_BASE}/${book.apiBook}/${chapterNum}.json`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('Error al cargar el capítulo');
+  const data = await res.json();
+  return data.verses.map(v => v.text).join('\n\n');
+}
+
+function showLoadingState(){
+  sheetContent.innerHTML = `
+    <div class="reader-head"><span class="badge">⏳ Cargando</span><h3>Preparando audio…</h3></div>
+    <div style="text-align:center;padding:60px 20px;color:var(--muted);">
+      <div style="font-size:36px;margin-bottom:12px;">📖</div>
+      <div>Obteniendo el texto del capítulo…</div>
+    </div>`;
+}
+
+function showErrorState(msg){
+  sheetContent.innerHTML = `
+    <div class="reader-head"><span class="badge">⚠️ Error</span><h3>No se pudo cargar</h3></div>
+    <div style="text-align:center;padding:60px 20px;color:var(--muted);">
+      <div style="font-size:36px;margin-bottom:12px;">📡</div>
+      <div style="margin-bottom:8px;">${esc(msg)}</div>
+      <div style="font-size:12px;">Verifica tu conexión a internet.</div>
+    </div>`;
+}
+
+/* ============================================================
+   CONSTRUIR LECTOR CON TEXTO
+   ============================================================ */
+function renderReaderView(book, chapterIndex, text){
+  const isDev = typeof book.chapters !== 'number';
+  const chTitle = isDev ? book.chapters[chapterIndex].title : `Capítulo ${chapterIndex + 1}`;
+
+  const pars = text.split(/\n\n+/);
   tts.wordSpans = [];
   const html = pars.map((p, pi) => {
     const tokens = p.split(/(\s+)/);
@@ -463,8 +486,9 @@ function showReader(book, chapterIndex){
     tts.wordSpans.push(spans);
     return `<p class="para" id="para-${pi}" data-para="${pi}">${words.join('')}</p>`;
   }).join('');
+
   sheetContent.innerHTML = `
-    <div class="reader-head"><span class="badge">▶ En audio</span><h3>${esc(ch.title)}</h3></div>
+    <div class="reader-head"><span class="badge">▶ En audio</span><h3>${esc(chTitle)}</h3></div>
     <div class="reader-body">${html}</div>`;
   openSheet();
 }
@@ -495,24 +519,26 @@ function hlWord(pi, charIndex){
 /* ============================================================
    MOTOR DE LECTURA
    ============================================================ */
-function prepare(book, chapterIndex){
+function prepare(book, chapterIndex, text){
   state.book = book; state.chapterIndex = chapterIndex;
-  const ch = book.chapters[chapterIndex];
-  tts.paragraphs = ch.text.split(/\n\n+/);
+  tts.paragraphs = text.split(/\n\n+/);
   tts.charLengths = tts.paragraphs.map(p => p.length);
   tts.totalChars = tts.charLengths.reduce((a,b) => a+b, 0) || 1;
   tts.index = 0; tts.playing = false; tts.boundaryFired = false;
 
+  const isDev = typeof book.chapters !== 'number';
+  const chTitle = isDev ? book.chapters[chapterIndex].title : `Capítulo ${chapterIndex + 1}`;
+
   mini.classList.add('visible');
   miniCover.style.background = grad(book.colors);
   miniCover.innerHTML = `<span style="font-size:20px;display:grid;place-items:center;width:100%;height:100%;color:#fff">${book.icon}</span>`;
-  miniTitle.textContent = ch.title;
+  miniTitle.textContent = chTitle;
   miniSubtitle.textContent = `${book.title} · ${book.author}`;
   miniPlay.textContent = '▶';
 
   pfCover.style.background = grad(book.colors);
   pfCover.innerHTML = `<span style="font-size:80px;display:grid;place-items:center;width:100%;height:100%;color:#fff">${book.icon}</span>`;
-  pfTitle.textContent = ch.title;
+  pfTitle.textContent = chTitle;
   pfSubtitle.textContent = `${book.title} · ${book.author}`;
   pfPlay.textContent = '▶';
   updateProgress(0, 1);
@@ -558,7 +584,8 @@ function speak(){
     if (tts.index < tts.paragraphs.length - 1){ tts.index++; speak(); }
     else {
       const next = state.chapterIndex + 1;
-      if (next < state.book.chapters.length) loadChapter(state.book, next, true);
+      const total = typeof state.book.chapters === 'number' ? state.book.chapters : state.book.chapters.length;
+      if (next < total) loadChapter(state.book, next, true);
       else { tts.playing = false; setPlayIcon(false); updateProgress(tts.paragraphs.length, tts.paragraphs.length); }
     }
   };
@@ -605,7 +632,7 @@ function setPlayIcon(playing){
 }
 
 function playPause(){
-  if (!state.book){ loadChapter(LIBRARY[0], 0, true); return; }
+  if (!state.book){ loadChapter(BOOKS[0], 0, true); return; }
   if (tts.playing){
     tts.playing = false;
     speechSynthesis.pause();
@@ -620,8 +647,9 @@ function playPause(){
 
 function nextChapter(){
   if (!state.book) return;
+  const total = typeof state.book.chapters === 'number' ? state.book.chapters : state.book.chapters.length;
   const n = state.chapterIndex + 1;
-  if (n < state.book.chapters.length) loadChapter(state.book, n, tts.playing);
+  if (n < total) loadChapter(state.book, n, tts.playing);
 }
 function prevChapter(){
   if (!state.book) return;
@@ -629,12 +657,38 @@ function prevChapter(){
   if (p >= 0) loadChapter(state.book, p, tts.playing);
 }
 
-function loadChapter(book, index, autoplay = true){
-  if (!book || !book.chapters[index]) return;
+async function loadChapter(book, index, autoplay = true){
+  if (!book || state.loading) return;
+  const total = typeof book.chapters === 'number' ? book.chapters : book.chapters.length;
+  if (index < 0 || index >= total) return;
+
+  state.loading = true;
   speechSynthesis.cancel(); clearTimeout(tts.boundaryTimer);
-  showReader(book, index); prepare(book, index);
-  if (autoplay){ tts.playing = true; setPlayIcon(true); setTimeout(speak, 150); }
-  else { setPlayIcon(false); }
+
+  showLoadingState();
+
+  try {
+    let text;
+    if (typeof book.chapters === 'number'){
+      text = await fetchChapterText(book, index + 1);
+    } else {
+      text = book.chapters[index].text;
+    }
+
+    renderReaderView(book, index, text);
+    prepare(book, index, text);
+
+    if (autoplay){
+      tts.playing = true; setPlayIcon(true);
+      setTimeout(speak, 150);
+    } else {
+      setPlayIcon(false);
+    }
+  } catch (err){
+    showErrorState(err.message || 'Error de conexión');
+  } finally {
+    state.loading = false;
+  }
 }
 
 /* ============================================================
@@ -650,7 +704,7 @@ pfSeek.addEventListener('input', () => {
   const p = Number(pfSeek.value); setProgress(pfSeek, p); pfCur.textContent = pct(p);
 });
 pfSeek.addEventListener('change', () => {
-  if (!state.book) return;
+  if (!state.book || !tts.paragraphs.length) return;
   const p = Number(pfSeek.value);
   const target = (p / 100) * tts.totalChars;
   let acc = 0, tgt = 0;
@@ -700,14 +754,14 @@ searchInput.addEventListener('input', e => {
 
 libraryEl.addEventListener('click', e => {
   const fab = e.target.closest('.play-fab');
-  if (fab){ e.stopPropagation(); const book = LIBRARY.find(b => b.id === fab.dataset.play); if (book) loadChapter(book, 0, true); return; }
+  if (fab){ e.stopPropagation(); const book = BOOKS.find(b => b.id === fab.dataset.play); if (book) loadChapter(book, 0, true); return; }
   const card = e.target.closest('.card');
-  if (card){ const book = LIBRARY.find(b => b.id === card.dataset.id); if (book) showChapterList(book); }
+  if (card){ const book = BOOKS.find(b => b.id === card.dataset.id); if (book) showChapterList(book); }
 });
 
 sheet.addEventListener('click', e => {
   const item = e.target.closest('.chapter-item'); if (!item) return;
-  const book = LIBRARY.find(b => b.id === item.dataset.book);
+  const book = BOOKS.find(b => b.id === item.dataset.book);
   const idx = Number(item.dataset.index);
   if (book) loadChapter(book, idx, true);
 });
@@ -719,7 +773,7 @@ miniInner.addEventListener('click', e => { if (e.target.closest('#miniPlay')) re
 miniPlay.addEventListener('click', e => { e.stopPropagation(); playPause(); });
 
 pfClose.addEventListener('click', () => playerFull.classList.remove('open'));
-pfReader.addEventListener('click', () => { if (state.book) showReader(state.book, state.chapterIndex); });
+pfReader.addEventListener('click', () => { if (state.book) showChapterList(state.book); });
 pfPlay.addEventListener('click', playPause);
 pfNext.addEventListener('click', nextChapter);
 pfPrev.addEventListener('click', prevChapter);
